@@ -41,5 +41,13 @@ public class DirectedGraph {
     public boolean isEmpty() {
         return adjacencyList.isEmpty();
     }
+
+    public Set<Integer> getVertices() {
+        return adjacencyList.keySet();
+    }
+
+    public Set<Integer> getNeighbours(int vertex) {
+        return adjacencyList.getOrDefault(vertex, new HashSet<>());
+    }
 }
 
